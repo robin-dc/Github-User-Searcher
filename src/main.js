@@ -69,7 +69,7 @@ function renderUser(user){
             <li class=" text-white font-semibold">Following: ${followingCount}</li>
         </ul>
         <p class="absolute top-[0.8rem] md:top-[1.5rem] left-[50%] translate-x-[-50%] text-4xl md:text-[5.1rem] font-black text-[#808080c0] leading-[1.15rem] md:leading-[3rem]">${alias}</p>
-        <p class="absolute bottom-[0.5rem] md:bottom-1 left-1 font-semibold text-[#808080c0]">Date Created: <span class="text-lightOrange">${shortenDate}</span></p>`
+        <p class="absolute bottom-[0.5rem] md:bottom-1 left-1 font-semibold text-[#808080c0]">Created: <span class="text-lightOrange">${shortenDate}</span></p>`
 
     activityStatus(repos, accountActivity)
     inputUser.value = ""
