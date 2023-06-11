@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User Searcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="shortcut icon" href="src/images/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <header class="container absolute top-0 left-0 right-0">
+            <nav class="p-1 gap-1 md:gap-0 flex flex-col md:flex-row justify-center items-center md:justify-between">
+                <div class="flex gap-1 items-center">
+                    <i class="fa-brands fa-github text-3xl text-white"></i>
+                    <h1 class="text-white font-bold text-xl">Github User Searcher</h1>
+                </div>
+                <form class="rounded-lg overflow-hidden flex gap-0">
+                    <input type="text" placeholder="Search Github Username." class="pl-1 py-[0.5rem] pr-4 outline-none" id="input-user">
+                    <button class="px-1 py-[0.5rem] text-white font-bold bg-violet" id="search-btn">Search</button>
+                </form>
+            </nav>
+        </header>
+        <div class="bg-hero min-h-screen">
+            <div class="absolute -bottom-3 md:bottom-1 main px-1 md:px-[0.5rem] h-[90%] md:h-[80%] z-10">
+                <main class="container bg-[#161b22] h-full rounded-lg">
+                    <div class="h-full flex flex-col overflow-x-hidden">
+                        <ul class="flex justify-between py-1 px-1">
+                            <li><i class="fa-solid fa-code text-[#808080d5] text-2xl"></i></li>
+                            <li class="flex items-center justify-between w-1/2 py-[0.2rem] px-[0.4rem] bg-darkGray rounded-md border border-gray">
+                                <i class="fa-solid fa-lock text-[#808080d5] text-sm md:text-base"></i>
+                                <a href="https://robindc.vercel.app/" target="_blank" class="text-white font-semibold text-[0.78rem] md:text-base">robindc.vercel.app</a>
+                                <i class="fa-solid fa-arrow-rotate-left text-[#808080d5] text-sm md:text-base"></i>
+                            </li>
+                            <li><i class="fa-solid fa-plus text-[#808080d5] text-2xl"></i></li>
+                        </ul>
+                        <div class="h-full flex overflow-y-hidden">
+                            <div class="flex flex-col-reverse h-full md:flex-row w-full overflow-y-hidden">
+                                <div class="h-[40%] md:w-1/2 md:h-full bg-darkGray z-10">
+                                    <div class="flex gap-1 pl-1 bg-transparent">
+                                        <button class="bg-[#161b22] px-1 py-[0.3rem] rounded-bl-2xl rounded-br-2xl" id="follower-btn">
+                                            <p class="font-medium text-white">Followers</p>
+                                        </button>
+                                        <button class="bg-[#161b22] px-1 py-[0.3rem] rounded-bl-2xl rounded-br-2xl" id="following-btn">
+                                            <p class="font-medium text-white">Following</p>
+                                        </button>
+                                    </div>
+                                    <div class="h-full flex flex-wrap gap-[1.5rem] justify-center p-1 pb-3 overflow-y-scroll scrollbar relative over-container" id="json-container">
+
+                                    <!-- =================== FOLLOWERS AND FOLLOWINGS WILL GO HERE ================= -->
+
+                                    </div>
+                                </div>
+                                <div class="h-[60%] md:w-1/2 md:h-full flex flex-col md:gap-[0.5rem] justify-center items-center relative text-center p-1 overflow-x-hidden" id="user-container">
+                                    <p class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-4xl md:text-[3rem] font-black text-[#808080c0] text-center leading-[3.5rem]">Who are you looking for?</p>
+                                    <!-- =================== USER INFORMATION WILL GO HERE ================= -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="bg-footer min-h-[80vh] md:min-h-screen flex items-end relative">
+            <div class="absolute right-0 top-4 md:top-1 w-3/5 md:w-2/5 flex justify-center">
+                <img src="src/images/hero-drone.png" class="w-1/2 animation z-20" alt="">
+            </div>
+            <div class="absolute top-[35%] translate-y-[-50%] left-2 z-10 flex flex-col gap-0 text-center md:text-left">
+                <h2 class="text-[#b65d47] text-[3rem] md:text-[3.5rem] font-bold">Found an issue?</h2>
+                <p class="text-white text-[1.5rem] font-bold">Fix it on github :
+                    <a href="https://github.com/robin-dc" target="_blank" class="text-lightOrange">@robin-dc</a>
+                </p>
+            </div>
+            <footer class="w-4/5 md:w-1/2 mx-auto relative flex justify-center container">
+                <img src="src/images/globe_rm.png" class="absolute bottom-2 md:bottom-6" alt="">
+                <img src="src/images/astrocat.png" class="absolute bottom-0 w-1/2" alt="">
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700;800;900;1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *{
+        font-family: 'Sofia Sans', sans-serif;
+    }
+    .bg-hero{
+        background-image: url("images/hero-bg.png") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    .bg-footer{
+        background-image: url("images/footer-galaxy.png") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    .animation{
+        animation: bounce 2s infinite;
+    }
+
+
+    @keyframes bounce {
+    0%, 100% {
+        transform: translateY(-35%);
+        /* animation-timing-function: cubic-bezier(0.8, 0, 1, 1); */
+    }
+    50% {
+        transform: translateY(0);
+        /* animation-timing-function: cubic-bezier(0, 0, 0.2, 1); */
+    }
+    }
+    .main{
+        width:100% !important;
+    }
+    main{
+        border: 1px solid #80808052 !important;
+    }
+    main ul{
+        border-bottom: 1px solid #80808052 !important ;
+    }
+    .over-container::-webkit-scrollbar{
+        background-color: transparent !important;
+        width:3px !important;
+        padding:3px !important;
+    }
+    .over-container::-webkit-scrollbar-thumb{
+        background-color: #808080c0 !important;
+        width:3px !important;
+        border-radius: 10px;
+    }
+}
